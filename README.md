@@ -43,7 +43,7 @@ class studentAdmin(admin.ModelAdmin):
 ```
 ## OUTPUT
 
-![WhatsApp Image 2024-09-21 at 10 15 11_ae3c07fc](https://github.com/user-attachments/assets/e8ed20b2-3906-4e01-acbe-4b720da7fc36)
+![WhatsApp Image 2024-09-21 at 10 15 11_fbb20cc8](https://github.com/user-attachments/assets/14aea9f6-6681-4614-a9df-a8ca10097bd4)
 
 
 ## RESULT
