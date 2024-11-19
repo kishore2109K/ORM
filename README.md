@@ -1,5 +1,5 @@
 # Ex02 Django ORM Web Application
-## Date: 
+## Date: 19.11.24
 
 ## AIM
 To develop a Django application to store and retrieve data from a bank loan database using Object Relational Mapping(ORM).
@@ -23,27 +23,33 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-```
 admin.py
+```
 from django.contrib import admin
-from .models import student,studentAdmin
-admin.site.register(student,studentAdmin)
-
+from .models import Bankloan,BankloanAdmin
+admin.site.register(Bankloan,BankloanAdmin)
+```
 models.py
+```
 from django.db import models
 from django.contrib import admin
-class student (models.Model):
-    name=models.CharField(max_length=20,help_text="student")
-    rollno=models.IntegerField()
-    refno=models.IntegerField()
-    age=models.IntegerField()
-    email=models.EmailField()
-class studentAdmin(admin.ModelAdmin):
-    list_display=('name','rollno','refno','age','email')
+class Bankloan (models.Model):
+    Loanid=models.IntegerField(primary_key=True);
+    Name=models.CharField(max_length=100);
+    Age=models.IntegerField(default=18);
+    emailid=models.CharField(max_length=100);
+    phone=models.IntegerField();
+    City=models.CharField(max_length=20, default='Chennai');
+    Accountno=models.IntegerField();
+    Salary=models.IntegerField();
+    Loanamt=models.IntegerField();
+
+class BankloanAdmin(admin.ModelAdmin):
+    list_display=('Loanid','Name','Age','emailid','phone','City','Accountno','Salary','Loanamt')
 ```
 ## OUTPUT
 
-![WhatsApp Image 2024-09-21 at 10 15 11_fbb20cc8](https://github.com/user-attachments/assets/14aea9f6-6681-4614-a9df-a8ca10097bd4)
+![image](https://github.com/user-attachments/assets/e3ea497c-2c0e-4657-9d96-1c079e52b2fc)
 
 
 ## RESULT
